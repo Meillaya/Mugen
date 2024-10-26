@@ -1,13 +1,13 @@
-import { BooksView } from "@/components/books/books-view";
-import { Suspense } from "react";
-import { BooksLoading } from "@/components/books/books-loading";
+import { HomeHero } from "@/components/home/HomeHero";
+import { HomeFeatures } from "@/components/home/HomeFeatures";
+import { HomeActions } from "@/components/home/HomeActions";
 
 export default function Home() {
   return (
-    <main className="container py-8">
-      <Suspense fallback={<BooksLoading />}>
-        <BooksView />
-      </Suspense>
-    </main>
+    <div className="container py-8 space-y-12">
+      <HomeHero />
+      <HomeFeatures />
+      <HomeActions />
+    </div>
   );
 }
